@@ -2,8 +2,7 @@ FROM debian:latest
 MAINTAINER Brent Salisbury <brent.salisbury@gmail.com>
 
 RUN apt-get update -qq \
-    && apt-get install -y \
-    curl \
+    && apt-get install -y curl \
     && apt-get clean
 
 # Install Influxdb
