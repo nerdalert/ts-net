@@ -177,6 +177,24 @@ docker-compose -f run_demo.yml rm -v -f  \
     && docker-compose -f run_demo.yml up -d
 ```
 
+### View InfluxDB Raw Series Data
+
+You can go to the InfluxDB admin page whose port is exposed by the compose `yml` file.
+ 
+`Example url: http://192.168.99.100:8083/`
+
+The IP is the docker host/machines IP.
+
+Then login -> explore data (a DB named graphite should be there if the compose demo is running):
+
+In the query box use `select * from /.*/ limit 10` to query the last 10 data points in all of the series.
+
+It should look something like this:
+
+![](http://networkstatic.net/wp-content/uploads/2015/06/InfluxDB-Query.jpg)
+
+*note* I need to rename the time series as upload/download are not unique. I think its just a different opinion between whisper db and influx.
+
 ### Measuring Real Bandwidth
 
 I need to change the run.sh script around to use InfluxDB. I will one night this week :) 
