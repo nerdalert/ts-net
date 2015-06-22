@@ -1,0 +1,1955 @@
+{
+  "id": 1,
+  "title": "Cloud Bandwidth Dashboard Copy",
+  "originalTitle": "Cloud Bandwidth Dashboard Copy",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "vmwarevcloudair": "#E24D42",
+            "vmwarevsphere": "#D683CE"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "height": "500",
+          "id": 1,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 1,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "amazonec2",
+              "query": "SELECT mean(value) FROM \"amazonec2\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "azure",
+              "query": "SELECT mean(value) FROM \"azure\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "digitalocean",
+              "query": "SELECT mean(value) FROM \"digitalocean\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "google",
+              "query": "SELECT mean(value) FROM \"google\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "openstack",
+              "query": "SELECT mean(value) FROM \"openstack\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "rackspace",
+              "query": "SELECT mean(value) FROM \"rackspace\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "softlayer",
+              "query": "SELECT mean(value) FROM \"softlayer\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "virtualbox",
+              "query": "SELECT mean(value) FROM \"virtualbox\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "virtualbox",
+              "query": "SELECT mean(value) FROM \"virtualbox\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarefusion",
+              "query": "SELECT mean(value) FROM \"vmwarefusion\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarevcloudair",
+              "query": "SELECT mean(value) FROM \"vmwarevcloudair\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarevsphere",
+              "query": "SELECT mean(value) FROM \"vmwarevsphere\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Aggregate Upload Bandwidth",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "vmwarevcloudair": "#E24D42",
+            "vmwarevsphere": "#D683CE"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "height": "500",
+          "id": 2,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 1,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "amazonec2",
+              "query": "SELECT mean(value) FROM \"amazonec2\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ]
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "azure",
+              "query": "SELECT mean(value) FROM \"azure\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "digitalocean",
+              "query": "SELECT mean(value) FROM \"digitalocean\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "google",
+              "query": "SELECT mean(value) FROM \"google\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "openstack",
+              "query": "SELECT mean(value) FROM \"openstack\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "rackspace",
+              "query": "SELECT mean(value) FROM \"rackspace\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "softlayer",
+              "query": "SELECT mean(value) FROM \"softlayer\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "virtualbox",
+              "query": "SELECT mean(value) FROM \"virtualbox\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "virtualbox",
+              "query": "SELECT mean(value) FROM \"virtualbox\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarefusion",
+              "query": "SELECT mean(value) FROM \"vmwarefusion\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarevcloudair",
+              "query": "SELECT mean(value) FROM \"vmwarevcloudair\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            },
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarevsphere",
+              "query": "SELECT mean(value) FROM \"vmwarevsphere\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Aggregate Download Bandwidth",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        }
+      ],
+      "title": "Row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "editable": true,
+          "error": false,
+          "format": "bps",
+          "id": 14,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "30%",
+          "prefix": "CURRENT AVERAGE DOWNLOAD",
+          "prefixFontSize": "30%",
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 99, 189, 0.29)",
+            "full": true,
+            "lineColor": "rgb(31, 147, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "/.*/",
+              "query": "SELECT mean(value) FROM /.*/ WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ]
+            }
+          ],
+          "thresholds": "",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "editable": true,
+          "error": false,
+          "format": "bps",
+          "id": 15,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "30%",
+          "prefix": "CURRENT AVERAGE UPLOAD",
+          "prefixFontSize": "30%",
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(143, 189, 31, 0.15)",
+            "full": true,
+            "lineColor": "rgba(222, 232, 19, 0.59)",
+            "show": true
+          },
+          "targets": [
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "/.*/",
+              "query": "SELECT mean(value) FROM /.*/ WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            }
+          ],
+          "thresholds": "",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "editable": true,
+          "error": false,
+          "format": "bps",
+          "id": 18,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "30%",
+          "prefix": "AVERAGE DOWNLOAD HISTORY",
+          "prefixFontSize": "30%",
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 138, 189, 0.36)",
+            "full": false,
+            "lineColor": "rgb(31, 193, 192)",
+            "show": true
+          },
+          "targets": [
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "/.*/",
+              "query": "SELECT mean(value) FROM /.*/ WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ]
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "title": "Average Download 15 Minutes Ago",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg",
+          "timeShift": "15m"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "editable": true,
+          "error": false,
+          "format": "bps",
+          "id": 17,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "30%",
+          "prefix": "AVERAGE UPLOAD HISTORY",
+          "prefixFontSize": "30%",
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(143, 189, 31, 0.29)",
+            "full": false,
+            "lineColor": "rgb(222, 232, 19)",
+            "show": true
+          },
+          "targets": [
+            {
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "/.*/",
+              "query": "SELECT mean(value) FROM /.*/ WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "title": "Average Upload 15 Minutes Ago",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg",
+          "timeShift": "15m"
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#EAB839",
+            "AWS Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 3,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "AWS Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "amazonec2",
+              "query": "SELECT mean(value) FROM \"amazonec2\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "AWS Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "amazonec2",
+              "query": "SELECT mean(value) FROM \"amazonec2\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Amazon AWS Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#1F78C1",
+            "Digital Ocean Upload": "#F9934E",
+            "Google Download": "#D683CE",
+            "Google Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 6,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "Google Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "google",
+              "query": "SELECT mean(value) FROM \"google\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "Google Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "google",
+              "query": "SELECT mean(value) FROM \"google\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Google Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#1F78C1",
+            "Digital Ocean Upload": "#D683CE",
+            "RackSpace Download": "#BF1B00",
+            "RackSpace Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 8,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "RackSpace Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "rackspace",
+              "query": "SELECT mean(value) FROM \"rackspace\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "RackSpace Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "rackspace",
+              "query": "SELECT mean(value) FROM \"rackspace\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "RackSpace Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#1F78C1",
+            "Digital Ocean Upload": "#D683CE",
+            "RackSpace Download": "#1F78C1",
+            "RackSpace Upload": "#BF1B00",
+            "SoftLayer Download": "#806EB7",
+            "SoftLayer Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 9,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "SoftLayer Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "softlayer",
+              "query": "SELECT mean(value) FROM \"softlayer\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "SoftLayer Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "softlayer",
+              "query": "SELECT mean(value) FROM \"softlayer\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "SoftLayer Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#1F78C1",
+            "Digital Ocean Upload": "#D683CE",
+            "RackSpace Download": "#1F78C1",
+            "RackSpace Upload": "#BF1B00",
+            "SoftLayer Download": "#806EB7",
+            "SoftLayer Upload": "#1F78C1",
+            "VirtualBox Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 10,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "VirtualBox Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "virtualbox",
+              "query": "SELECT mean(value) FROM \"virtualbox\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "VirtualBox Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "virtualbox",
+              "query": "SELECT mean(value) FROM \"virtualbox\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "VirtualBox Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#65C5DB",
+            "Digital Ocean Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 4,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "Digital Ocean Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "digitalocean",
+              "query": "SELECT mean(value) FROM \"digitalocean\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "Digital Ocean Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "digitalocean",
+              "query": "SELECT mean(value) FROM \"digitalocean\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Digital Ocean Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#1F78C1",
+            "Digital Ocean Upload": "#D683CE",
+            "RackSpace Download": "#1F78C1",
+            "RackSpace Upload": "#BF1B00",
+            "SoftLayer Download": "#806EB7",
+            "SoftLayer Upload": "#1F78C1",
+            "VMware Fusion Download": "#7EB26D",
+            "VMware Fusion Upload": "#1F78C1",
+            "VMware vCloud Air Download": "#AEA2E0",
+            "VMware vCloud Air Upload": "#1F78C1",
+            "VMware vSphere Download": "#CCA300",
+            "VMware vSphere Upload": "#1F78C1",
+            "VirtualBox Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 13,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "VMware vSphere Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarevsphere",
+              "query": "SELECT mean(value) FROM \"vmwarevsphere\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "VMware vSphere Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarevsphere",
+              "query": "SELECT mean(value) FROM \"vmwarevsphere\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "VMware vSphere Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#1F78C1",
+            "Digital Ocean Upload": "#D683CE",
+            "RackSpace Download": "#1F78C1",
+            "RackSpace Upload": "#BF1B00",
+            "SoftLayer Download": "#806EB7",
+            "SoftLayer Upload": "#1F78C1",
+            "VMware Fusion Download": "#7EB26D",
+            "VMware Fusion Upload": "#1F78C1",
+            "VMware vCloud Air Download": "#E24D42",
+            "VMware vCloud Air Upload": "#1F78C1",
+            "VirtualBox Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 12,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "VMware vCloud Air Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarevcloudair",
+              "query": "SELECT mean(value) FROM \"vmwarevcloudair\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "VMware vCloud Air Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarevcloudair",
+              "query": "SELECT mean(value) FROM \"vmwarevcloudair\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "VMware vCloud Air Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#F4D598",
+            "Azure Download": "#EF843C",
+            "Azure Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 5,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "Azure Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "azure",
+              "query": "SELECT mean(value) FROM \"azure\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "Azure Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "azure",
+              "query": "SELECT mean(value) FROM \"azure\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Azure Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#70DBED",
+            "Digital Ocean Upload": "#1F78C1",
+            "OpenStack Download": "#E24D42",
+            "OpenStack Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 7,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "OpenStack Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "openstack",
+              "query": "SELECT mean(value) FROM \"openstack\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "OpenStack Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "openstack",
+              "query": "SELECT mean(value) FROM \"openstack\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "OpenStack Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "AWS Download": "#1F78C1",
+            "AWS Upload": "#6ED0E0",
+            "Digital Ocean Download": "#1F78C1",
+            "Digital Ocean Upload": "#D683CE",
+            "RackSpace Download": "#1F78C1",
+            "RackSpace Upload": "#BF1B00",
+            "SoftLayer Download": "#806EB7",
+            "SoftLayer Upload": "#1F78C1",
+            "VMware Fusion Download": "#7EB26D",
+            "VMware Fusion Upload": "#1F78C1",
+            "VirtualBox Upload": "#1F78C1",
+            "amazonec2": "#F4D598"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 3,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 11,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 3,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "VMware Fusion Upload",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarefusion",
+              "query": "SELECT mean(value) FROM \"vmwarefusion\" WHERE bandwidth='upload' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "upload"
+                }
+              ]
+            },
+            {
+              "alias": "VMware Fusion Download",
+              "function": "mean",
+              "groupByTags": [],
+              "measurement": "vmwarefusion",
+              "query": "SELECT mean(value) FROM \"vmwarefusion\" WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "target": ""
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "VMware Fusion Upload / Download",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bps",
+            "short"
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "title": "New row",
+      "height": "250px",
+      "editable": true,
+      "collapse": false,
+      "panels": [
+        {
+          "title": "DOWNLOAD BANDWIDTH",
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "graph",
+          "id": 19,
+          "datasource": null,
+          "renderer": "flot",
+          "x-axis": false,
+          "y-axis": false,
+          "y_formats": [
+            "none",
+            "none"
+          ],
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null,
+            "rightLogBase": 1,
+            "threshold1": null,
+            "threshold2": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "lines": true,
+          "fill": 7,
+          "linewidth": 0,
+          "points": false,
+          "pointradius": 5,
+          "bars": false,
+          "stack": false,
+          "percentage": false,
+          "legend": {
+            "show": false,
+            "values": false,
+            "min": false,
+            "max": false,
+            "current": false,
+            "total": false,
+            "avg": false
+          },
+          "nullPointMode": "connected",
+          "steppedLine": false,
+          "tooltip": {
+            "value_type": "cumulative",
+            "shared": true
+          },
+          "timeFrom": null,
+          "timeShift": null,
+          "targets": [
+            {
+              "function": "mean",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "groupByTags": [],
+              "measurement": "/.*/",
+              "query": "SELECT mean(value) FROM /.*/ WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "rawQuery": false
+            }
+          ],
+          "aliasColors": {},
+          "seriesOverrides": [],
+          "hideTimeOverride": false,
+          "links": [],
+          "transparent": true
+        },
+        {
+          "title": "UPLOAD BANDWIDTH",
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "graph",
+          "id": 20,
+          "datasource": null,
+          "renderer": "flot",
+          "x-axis": false,
+          "y-axis": false,
+          "y_formats": [
+            "none",
+            "none"
+          ],
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null,
+            "rightLogBase": 1,
+            "threshold1": null,
+            "threshold2": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "lines": true,
+          "fill": 7,
+          "linewidth": 0,
+          "points": false,
+          "pointradius": 5,
+          "bars": false,
+          "stack": false,
+          "percentage": false,
+          "legend": {
+            "show": false,
+            "values": false,
+            "min": false,
+            "max": false,
+            "current": false,
+            "total": false,
+            "avg": false
+          },
+          "nullPointMode": "connected",
+          "steppedLine": false,
+          "tooltip": {
+            "value_type": "cumulative",
+            "shared": true
+          },
+          "timeFrom": null,
+          "timeShift": null,
+          "targets": [
+            {
+              "function": "mean",
+              "tags": [
+                {
+                  "key": "bandwidth",
+                  "value": "download"
+                }
+              ],
+              "groupByTags": [],
+              "measurement": "/.*/",
+              "query": "SELECT mean(value) FROM /.*/ WHERE bandwidth='download' AND $timeFilter GROUP BY time($interval) ORDER BY asc",
+              "rawQuery": false
+            }
+          ],
+          "aliasColors": {},
+          "seriesOverrides": [],
+          "hideTimeOverride": false,
+          "links": [],
+          "transparent": true
+        }
+      ]
+    }
+  ],
+  "nav": [
+    {
+      "collapse": false,
+      "enable": true,
+      "notice": false,
+      "now": true,
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "status": "Stable",
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ],
+      "type": "timepicker"
+    }
+  ],
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "templating": {
+    "list": []
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": "30s",
+  "schemaVersion": 6,
+  "version": 28,
+  "links": []
+}

@@ -1,0 +1,30 @@
+influxdb:
+  build: ./influxdb
+  ports:
+    - "2003:2003"
+    - "8083:8083"
+    - "8086:8086"
+    - "8125:8125"
+    - "8126:8126"
+  hostname: influxdb
+grafana:
+  build: ./grafana
+  ports:
+    - "3000:3000"
+  volumes:
+    - ./grafana/data:/var/lib/grafana/data
+    - ./grafana/dashboards:/var/lib/grafana/dashboards
+  links:
+    - influxdb
+  hostname: grafana
+demo:
+  build: ./demo
+  links:
+    - grafana
+    - influxdb
+  hostname: demo
+init:
+  build: ./init
+  links:
+    - grafana
+  hostname: init
