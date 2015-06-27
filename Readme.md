@@ -1,5 +1,7 @@
 # Time Series Network Metric Collection and Visualization Example Using Docker, InfluxDB and Grafana
 
+### Overview
+
 This is the same functionality as [networkstatic/cloud-bandwidth](https://github.com/nerdalert/cloud-bandwidth) but using InfluxDB and Grafana only (not whisper, carbon etc).
 
 * InfluxDB time series DB and Grafana. The advantage is less moving parts and some powerful aggragate functions from InfluxDB along with data rollups and some other key differentiators from other TSDBs. It uses the Graphite plugin to enable simple time series entries. 
