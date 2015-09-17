@@ -6,7 +6,7 @@
 ###################################################
 
 usage() {
-   echo "Usage: Examples (any of them work, see then variable definitions for then defaults):"
+   echo "Usage: Examples (any of them work, see the variable definitions for the defaults):"
    echo "===================================================================================="
    echo "generate_test_grafana_data.sh [ DB_IP (required)]  [ DB_PORT (optiona)]  [ NUMBER_OF_LOOPS (optiona)]  [ LOOP_INTERVAL (optiona)]"
    echo "===================================================================================="
@@ -17,7 +17,7 @@ usage() {
 }
 
 dashboardUsage(){
-    echo "View the Grafana UI in a browser at -----> [ http://<Machine IP Address>:8000 ]"
+    echo "View the Grafana UI in a browser at -----> [ http://<Machine IP Address>:3000 ]"
     echo "Hint: to get the public IP address of the machine run [ docker-machine ip <VM Name> ]"
     echo "Example: [ docker-machine ip virtualbox-machine ]"
     echo "To stop the tests use [ ctrl ^c ]"

@@ -23,7 +23,7 @@ cd ts-net/
 docker-compose -f run_demo.yml up
 ```
 
-Then point a browser to `http://<DOCKER_IP>:8000`
+Then point a browser to `http://<DOCKER_IP>:3000`
 
 To stop and remove the demo containers running with compose simply run the following in the same directory as the .yml file:
 
@@ -78,7 +78,7 @@ $ docker-machine ip vmwarefusion-machine
 172.16.166.157
 ```
 
-Then point a browser to `http://<DOCKER_IP>:8000`
+Then point a browser to `http://<DOCKER_IP>:3000`
 
 If you dont see data in the browser but instead see `datapoints outside time range` then change your time to the past 12 hours and you should see the data. Javascript is notoriously finicky with timezones. You can explicitly set one or use UTC. I have run into this a couple of times with grafana but havent figured out the pattern yet so will patch the config when I do.
 
@@ -154,9 +154,9 @@ docker-machine ls
 # virtualbox-machine     *        virtualbox     Running   tcp://192.168.99.101:2376
 ```
 
-The docker-compose and dockerfile instruct grafana to use port 8000 `8000`
+The docker-compose and dockerfile instruct grafana to use port 3000 `3000`
 
-`http://<MACHINE_IP>:8000`
+`http://<MACHINE_IP>:3000`
 
 You will begin to see the following be generated:
 
